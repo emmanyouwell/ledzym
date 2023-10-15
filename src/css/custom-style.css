@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Lato&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Prompt&display=swap');
+
+
+html,
+body {
+    font-family: 'Prompt', sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+.desc{
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.coverPic {
+    background: url('../images/logo.jpg') no-repeat top left transparent;
+    background-size: contain;
+    height: 1000px;
+}
+
+.background-gradient {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(45deg, #04e762, #00a1e4, #f5b700);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+}
+
+@keyframes color {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.hover{
+    transition: all 0.3s ease-in-out;
+}
+.hover:hover{
+    transform: translateY(-10%);
+    cursor: pointer;
+}
+/* section curves */
+section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding: 100px 20vh;
+}
+
+.divider1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.divider1 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.divider1 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.divider2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.divider2 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.divider2 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.divider3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.divider3 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 110px;
+}
+
+.divider3 .shape-fill {
+    fill: #2EC4B6;
+}
+
+.divider4 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.divider4 svg {
+    position: relative;
+    display: block;
+    width: calc(144% + 1.3px);
+    height: 75px;
+}
+
+.divider4 .shape-fill {
+    fill: #2b2d42;
+}
+
+
+.divider5 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.divider5 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 56px;
+}
+
+.divider5 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.divider6 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.divider6 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 155px;
+}
+
+.divider6 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.divider7 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.divider7 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 155px;
+}
+
+.divider7 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.spacer{
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.layer1{
+    background-image: url('../images/layer1.svg');
+    
+}
+.layer2{
+    background-image: url('../images/layer2.svg');
+}
+.layer3{
+    background-image: url('../images/layer3.svg');
+}
+
+.layer4{
+    background-image: url('../images/layer4.svg');
+}
+
+.layer5{
+    background-image: url('../images/layer5.svg');
+}
+
+.green{
+    background-color: #04e762;
+}
+.blue{
+    background-color: #00a1e4;
+}
+.black{
+    background-color: #001122;
+}
+.white{
+    background-color: #fff;
+}
+.cyan{
+    background-color: #2ec4b6;
+}
+
+.gray{
+    background-color: #2b2d42;
+}
+.darkBlack{
+    background-color: #000814;
+}
