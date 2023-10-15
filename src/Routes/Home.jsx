@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
@@ -27,7 +27,26 @@ import CarouselComponent from '../components/Carousel';
 import NavbarComponent from '../components/Navbar';
 import Footer from '../components/Footer';
 import Services from '../components/Services';
+
 const Home = () => {
+
+
+
+
+  useEffect(() => {
+    let valueDisplays = document.querySelectorAll('.num');
+    let interval = 1000;
+    valueDisplays.forEach((valueDisplay) => {
+      let startValue = 0;
+      let endValue = parseInt(valueDisplay.getAttribute('data-val'));
+      let duration = Math.floor(interval / endValue);
+      let counter = setInterval(function () {
+        startValue += 1;
+        valueDisplay.textContent = startValue;
+        if (startValue === endValue) clearInterval(counter);
+      }, duration)
+    });
+  }, []);
   return (
     <>
       <NavbarComponent />
@@ -39,11 +58,23 @@ const Home = () => {
             <Row className="d-flex align-items-center">
               <Col lg={7}>
                 <h1 className='display-2 text-white'><b>LEDZYM</b> Computer Trading</h1>
-                <p className='text-white'>LEDZYM Computer Trading specializes in installing and integrating advanced technology systems, including CCTV surveillance, solar power, fiber optics, wireless networks, and more. Committed to enhancing security, sustainability, and connectivity, they offer tailored solutions for businesses and individuals.</p>
+                <p className=' text-white'>LEDZYM Computer Trading specializes in installing and integrating advanced technology systems, including CCTV surveillance, solar power, fiber optics, wireless networks, and more. Committed to enhancing security, sustainability, and connectivity, they offer tailored solutions for businesses and individuals.</p>
+               
               </Col>
               <Col lg={5} className="d-flex align-items-center">
-                <Image src={test} fluid />
-                {/* <CarouselComponent /> */}
+              <div className="wrapper">
+                  <div className="card-glass">
+                    <i class="fa-solid fa-people-group"></i>
+                    <span className="num" data-val="120">000</span>
+                    <span className="text">Clients</span>
+                  </div>
+                  <div className="card-glass">
+                    <i class="fa-brands fa-facebook"></i>
+                    <span className="num" data-val="558">000</span>
+                    <span className="text">Followers</span>
+                  </div>
+                </div>
+                {/* <Image src={test} fluid /> */}
               </Col>
             </Row>
           </div>
@@ -129,16 +160,17 @@ const Home = () => {
 
 
       <section className="p-5 ">
+
         <div class="divider5">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M602.45,3.86h0S572.9,116.24,281.94,120H923C632,116.24,602.45,3.86,602.45,3.86Z" class="shape-fill"></path>
           </svg>
         </div>
-        <Container className='mt-5 p-lg-5 p-3'>
+        <Container className='mt-5 p-lg-4 p-3'>
           <h1 className="display-3 mb-5 text-white text-center">
             Featured Brands
           </h1>
-          <div className='p-3 p-lg-5'>
+          <div className='p-3 p-lg-4'>
             {/* <h1 className='lead text-secondary text-center mb-3'>CCTV Systems</h1> */}
             <Row xs={2} md={3} className='d-flex align-items-center justify-content-center g-4'>
 
@@ -162,7 +194,7 @@ const Home = () => {
               </Col>
             </Row>
           </div>
-          <div className='p-3 p-lg-5'>
+          <div className='p-3 p-lg-4'>
             {/* <h1 className='lead text-secondary text-center mb-3'>Door Access Systems</h1> */}
             <Row xs={2} md={3} className='d-flex align-items-center justify-content-center g-4'>
 
@@ -197,17 +229,23 @@ const Home = () => {
         </div> */}
       </section>
       <section className='p-5 bg-white'>
-        {/* <div class="divider4">
-          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
-          </svg>
-        </div> */}
+        <Container>
+          <h1 className='text-center display-3 mb-5'>About us</h1>
+          <p className='text-center'>LEDZYM Computer Trading specializes in installing and integrating advanced technology systems, including CCTV surveillance, solar power, fiber optics, wireless networks, and more. Committed to enhancing security, sustainability, and connectivity, they offer tailored solutions for businesses and individuals.</p>
+          
+          
+        </Container>
       </section>
       {/* <div className="spacer layer4"></div> */}
       <Footer />
 
 
-
+      {/* GREY WAVE DIVIDER 
+        <div class="divider4">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+          </svg>
+        </div> */}
     </>
   )
 }
