@@ -22,11 +22,14 @@ import zkteco from '../images/brands/zkteco.png';
 import lenel from '../images/brands/lenel.png';
 
 
-import CarouselComponent from '../components/Carousel';
+
 //Custom components
 import NavbarComponent from '../components/Navbar';
 import Footer from '../components/Footer';
-import Services from '../components/Services';
+import FooterBootstrap from '../components/FooterBootstrap';
+import CarouselComponent from '../components/Carousel';
+import Gallery from '../components/Gallery';
+import ContactForm from '../components/ContactForm';
 
 const Home = () => {
 
@@ -55,27 +58,33 @@ const Home = () => {
       <section className="p-lg-5 p-3">
         <Container className="mb-5 p-lg-5 p-3">
           <div className="mb-5 p-lg-5 p-3">
-            <Row className="d-flex align-items-center">
-              <Col lg={7}>
-                <h1 className='display-2 text-white'><b>LEDZYM</b> Computer Trading</h1>
+            <Row className="mb-5 p-3 p-lg-5 offset">
+              <Col lg={8}>
+                <h1 className='display-4 text-white'>Local Experts in Keeping Your Space Secure</h1>
                 <p className=' text-white'>LEDZYM Computer Trading specializes in installing and integrating advanced technology systems, including CCTV surveillance, solar power, fiber optics, wireless networks, and more. Committed to enhancing security, sustainability, and connectivity, they offer tailored solutions for businesses and individuals.</p>
-               
+
               </Col>
-              <Col lg={5} className="d-flex align-items-center">
-              <div className="wrapper">
+
+              <Col lg={4} className="d-flex align-items-center">
+
+                <div className="wrapper">
+
                   <div className="card-glass">
-                    <i class="fa-solid fa-people-group"></i>
+                    <i class="fa-solid fa-people-group white-icon"></i>
                     <span className="num" data-val="120">000</span>
                     <span className="text">Clients</span>
                   </div>
                   <div className="card-glass">
-                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-facebook white-icon"></i>
                     <span className="num" data-val="558">000</span>
                     <span className="text">Followers</span>
                   </div>
+
                 </div>
+
                 {/* <Image src={test} fluid /> */}
               </Col>
+
             </Row>
           </div>
         </Container>
@@ -229,16 +238,43 @@ const Home = () => {
         </div> */}
       </section>
       <section className='p-5 bg-white'>
-        <Container>
-          <h1 className='text-center display-3 mb-5'>About us</h1>
-          <p className='text-center'>LEDZYM Computer Trading specializes in installing and integrating advanced technology systems, including CCTV surveillance, solar power, fiber optics, wireless networks, and more. Committed to enhancing security, sustainability, and connectivity, they offer tailored solutions for businesses and individuals.</p>
-          
-          
+        <Container >
+          <h1 className='text-center text-muted display-3 mb-5'>About us</h1>
+          <div className="aboutUsContainer p-3 p-lg-5">
+
+
+            <h3 className='text-center'>Hi, we're here to keep you safe.</h3>
+            <br />
+            <p className='text-center'>We want you to know that your safety and comfort are very important to us. We know that safety issues are growing in the world we live in, and we are dedicated to addressing them by providing modern security solutions, such as CCTV installations and other advanced security systems.</p>
+          </div>
+
+          {/* <div className="carouselContainer">
+            <CarouselComponent />
+          </div> */}
+          {/* <Row>
+            <Col lg={6} className='p-3 p-lg-5'>
+             
+            </Col>
+            <Col lg={6} className='p-3 p-lg-5'>
+              <CarouselComponent />
+              
+            </Col>
+          </Row> */}
+          <Gallery />
         </Container>
       </section>
-      {/* <div className="spacer layer4"></div> */}
-      <Footer />
 
+
+      <section className='p-5'>
+
+          <ContactForm/>
+        
+      </section>
+
+
+      {/* <div className="spacer layer4"></div> */}
+      {/* <Footer /> */}
+      <FooterBootstrap/>
 
       {/* GREY WAVE DIVIDER 
         <div class="divider4">
