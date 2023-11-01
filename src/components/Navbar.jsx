@@ -1,21 +1,19 @@
 import React from 'react'
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import { HashLink as Goto } from 'react-router-hash-link';
 import Container from 'react-bootstrap/Container';
+
 const NavbarComponent = () => {
+  
   return (
     <Navbar expand="lg" className="navbar-dark">
       <Container>
-        <Navbar.Brand href="#home">LEDZYM</Navbar.Brand>
+        <Navbar.Brand href="/">LEDZYM Computer Trading</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#service">Services</Nav.Link>
-            <Nav.Link href="#aboutus">About Us</Nav.Link>
-            <Nav.Link href="#contact">Contacts</Nav.Link>
-            
+          <Nav className="ms-auto">
+            <Goto smooth to="/contact">Contact Us</Goto>
           </Nav>
         </Navbar.Collapse>
       </Container>

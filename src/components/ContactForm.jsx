@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import React, { useState } from 'react'
 import $ from 'jquery'
-const ContactForm = () => {
+const ContactForm = ({showA}) => {
     const [state, setState] = useState({
         feedback: '',
         name: '',
         email: '',
     })
+    
     const { feedback, name, email } = state
     const handleChange = event => {
         setState({ ...state, [event.target.name]: event.target.value })
@@ -14,45 +14,35 @@ const ContactForm = () => {
     const handleSubmit = event => {
         event.preventDefault()
         const templateId = 'template_u4g4a8q'
-        sendFeedback(templateId, { 'message': feedback, 'from_name': name, 'reply_to': email, 'from_email': email })
+        sendFeedback(templateId, { 'message': feedback, 'from_name': name, 'reply_to': email, 'from_email': email, 'to_name': 'Ledzym Computer Trading' })
     }
-
-
     function sendFeedback(templateId, variables) {
         const data = {
-            service_id: 'service_fktj4re',
+            service_id: 'service_yz6mgm7',
             template_id: templateId,
             user_id: 'ogLXnKGK9Toq-0ATz',
             template_params: variables,
         }
-     
         $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
             type: 'POST',
             data: JSON.stringify(data),
             contentType: 'application/json'
         }).done(function () {
-            alert('Your mail is sent!');
+            showA()
         }).fail(function (error) {
             alert('Oops... ' + JSON.stringify(error));
         });
-
-
-        // window.emailjs.send(
-        //     'service_fktj4re',
-        //     templateId,
-        //     variables
-        // ).then(res => {
-        //     console.log('Email successfully sent!')
-        // })
-        //     // Handle errors here however you like, or use a React error boundary
-        //     .catch(err => console.error('Oh well, you failed. Here some thoughts on the error that occured:', err))
     }
-
+   
     return (
-        <>
-            <form className="test-mailing">
-                <h1>Contact Us</h1>
-                <div>
+        <div style={{minWidth: '30%'}}>
+
+            
+
+            <form className="d-flex flex-column">
+                <h1 className='text-white fw-bold display-3 text-center mb-4'> <i className="fa-solid fa-phone fa-shake"></i> Contact Us</h1>
+                <div className='form-group'>
+                    <label htmlFor='name' className='text-white form-label'>Name</label>
                     <input type='text'
                         id='name'
                         name='name'
@@ -60,9 +50,10 @@ const ContactForm = () => {
                         placeholder="Enter name"
                         required
                         value={name}
-                        style={{width: '100%', lineHeight: '50px'}}
+                        style={{ width: '100%', lineHeight: '30px' }}
                         className='form-control mb-4'
                     />
+                    <label htmlFor="email" className='text-white form-label'>Email</label>
                     <input type='text'
                         id='email'
                         name='email'
@@ -70,9 +61,10 @@ const ContactForm = () => {
                         placeholder="Enter email"
                         required
                         value={email}
-                        style={{width: '100%', lineHeight: '50px'}}
+                        style={{ width: '100%', lineHeight: '30px' }}
                         className='form-control mb-4'
                     />
+                    <label htmlFor="feedback" className='text-white form-label'>Feedback</label>
                     <textarea
                         id="test-mailing"
                         name="feedback"
@@ -84,9 +76,9 @@ const ContactForm = () => {
                         style={{ width: '100%', height: '150px' }}
                     />
                 </div>
-                <input type="button" value="Submit" className="btn btn-outline-light mt-4" onClick={handleSubmit} />
+                <input type="button" value="Submit" className="btn btn-outline-light mt-4 align-self-end" onClick={handleSubmit} />
             </form>
-        </>
+        </div>
     )
 }
 
