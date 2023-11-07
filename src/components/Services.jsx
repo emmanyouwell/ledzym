@@ -129,7 +129,7 @@ const Services = () => {
                     <p className="card-text" >
                       <ul className='fa-ul'>
                         <li className="mb-3">
-                          <span className="fa-li"><i className="fas fa-home"></i></span><span className="ms-2">415 first street Honradez Extension <span className='ms-2'>Sampaloc,Manila</span></span>
+                          <span className="fa-li"><i className="fas fa-home"></i></span><span className="ms-2">415 first street Honradez <span className='ms-2'>Extension Sampaloc,Manila</span></span>
                         </li>
                         <li className="mb-3">
                           <span className="fa-li"><i className="fas fa-envelope"></i></span><span className="ms-2">ledzymcctv@gmail.com</span>
