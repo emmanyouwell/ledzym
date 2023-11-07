@@ -13,7 +13,7 @@ const NavbarComponent = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Goto smooth to="/contact">Contact Us</Goto>
+            <Goto smooth to="mailto:emingala02@gmail.com">Contact Us</Goto>
           </Nav>
         </Navbar.Collapse>
       </Container>

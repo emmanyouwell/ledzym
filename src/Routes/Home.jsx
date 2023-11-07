@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
@@ -23,12 +23,9 @@ import lenel from '../images/brands/lenel.png';
 import NavbarComponent from '../components/Navbar';
 import FooterBootstrap from '../components/FooterBootstrap';
 import Gallery from '../components/Gallery';
-import ContactForm from '../components/ContactForm';
-import CarouselComponent from '../components/Carousel';
+import Services from '../components/Services';
 
 const Home = () => {
-  const [showA, setShowA] = useState(false);
-  const toggleShowA = () => setShowA(!showA);
   useEffect(() => {
     let valueDisplays = document.querySelectorAll('.num');
     let interval = 1000;
@@ -87,7 +84,7 @@ const Home = () => {
             Our Services
           </h1>
           <div>
-            <CarouselComponent/>
+            <Services/>
           </div>
         </Container>
       </section>

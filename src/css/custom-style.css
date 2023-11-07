@@ -192,6 +192,12 @@ span.text{
     }
 }
 
+.show{
+    display: block;
+}
+.hide{
+    display:none;
+}
 
 /* section curves */
 section{
