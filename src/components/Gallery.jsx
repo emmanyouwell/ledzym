@@ -16,7 +16,6 @@ import img14 from '../images/gallery/img14.jpg'
 import img15 from '../images/gallery/img15.jpg'
 import img16 from '../images/gallery/img16.jpg'
 import img17 from '../images/gallery/img17.jpg'
-import img18 from '../images/gallery/img18.jpg'
 import img19 from '../images/gallery/img19.jpg'
 import img20 from '../images/gallery/img20.jpg'
 import CloseIcon from '@mui/icons-material/Close';
@@ -91,10 +90,10 @@ const Gallery = () => {
             id: 17,
             imgSrc: img17
         },
-        {
-            id: 18,
-            imgSrc: img18
-        },
+        // {
+        //     id: 18,
+        //     imgSrc: img18
+        // },
         {
             id: 19,
             imgSrc: img19

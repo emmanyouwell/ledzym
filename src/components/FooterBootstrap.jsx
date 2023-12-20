@@ -30,7 +30,14 @@ const FooterBootstrap = () => {
                                     <span className="fa-li"><i className="fas fa-envelope"></i></span><span className="ms-2">ledzymcctv@gmail.com</span>
                                 </li>
                                 <li className="mb-3">
-                                    <span className="fa-li"><i className="fas fa-phone"></i></span><span className="ms-2">+63 926 696 6300</span>
+                                <span className="fa-li"><i className="fas fa-phone"></i></span><span className="ms-2">PH Office:<br></br> +63 926 696 6300 / +63 927 774 0408</span>
+                                    
+                                    
+                                </li>
+                                <li className="mb-3">
+                                <span className="fa-li"><i className="fas fa-phone"></i></span><span className="ms-2">IL Office:<br></br> +97 258 721 2267 / +97 254 576 7227</span>
+                                    
+                                    
                                 </li>
                             </ul>
                         </div>
